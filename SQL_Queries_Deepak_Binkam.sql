@@ -5,8 +5,6 @@ INST327
 */
 
 
-
-
 #Question 1
 
 
@@ -21,10 +19,6 @@ FROM employees
 
 LEFT JOIN departments
 ON employees.department_number = departments.department_number;
-
-
-
-
 
 
 #Question 2
@@ -52,10 +46,6 @@ SHOW VARIABLES LIKE 'CTE_MAX_RECURSION_DEPTH';
 SHOW VARIABLES;
 
 
-
-
-
-
 #Question 3
 
 
@@ -74,12 +64,6 @@ ALTER USER 'flag_smasher'@'localhost' PASSWORD EXPIRE INTERVAL 60 DAY;
 RENAME USER 'falcon'@'localhost' TO 'captain_america'@'localhost';
 ALTER USER 'captain_america'@'localhost' IDENTIFIED BY 'redwing';
 DROP USER 'john_walker'@'localhost'; 
-
-
-
-
-
-
 
 
 # Question 4
@@ -151,25 +135,6 @@ SELECT * FROM new_invoice_records;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 
 Deepak Binkam 
 INST327
@@ -199,10 +164,6 @@ ON products.product_id = order_items.product_id
 ORDER BY product_name;
 
 
-
-
-
-
 /* Question 6 */
 
 
@@ -223,10 +184,6 @@ WHERE customers.customer_id IN (SELECT customer_id FROM orders)
 
 GROUP BY last_name
 ORDER BY last_name;
-
-
-
-
 
 
 /* Question 7 */ 
@@ -284,16 +241,12 @@ INSERT INTO addresses_copy
 SELECT* FROM addresses;
 
 
-
-
 /* Question 9 */ 
 
 
 USE my_guitar_shop;
 INSERT INTO customers_copy (Customer_id, Email_address, Password, First_name, Last_name, Shipping_address_id, billing_address_id) 
 VALUES (default, 'vdiker@murach.com', '7a718fbd768d2378z511f8249b54897f940e9023', 'Vedat', 'Diker', 10, 1); 
-
-
 
 
 /* Question 10 */ 
@@ -305,8 +258,6 @@ VALUES
 (11, 4, 'Y_PK100', 'Yamaha PK-100', "The Yamaha PK-100 88-key weighted action digital piano has a Graded Hammer Standard Action, 192-note Polyphony, 24 Sounds, Stereo Sound System, EQ, and Drum Patterns/Virtual Accompaniment - Black", 800.00, 20.00, NOW());  
 
 
-
-
 /* Question 11 */
 
 
@@ -316,8 +267,6 @@ SET list_price = '689.99', discount_percent = '40'
 WHERE Product_name = 'Yamaha PK-100'; 
 
 
-
-
 /* Question 12 */
 
 
@@ -325,14 +274,6 @@ USE my_guitar_shop;
 UPDATE addresses_copy
 SET disabled = 1
 WHERE state = 'CA' OR state = 'OR';
-
-
-
-
-
-
-
-
 
 
 /* Question 13 */
@@ -373,8 +314,6 @@ WHERE vendor_state > 'C' AND vendor_state < 'CO'
 ORDER BY vendor_city, vendor_name;
 
 
-
-
 /* Question 15 */
 USE om;
 
@@ -399,8 +338,6 @@ WHERE shipped_date IS NOT NULL
 ORDER BY order_date DESC;
 
 
-
-
 /* Question 16 */
 USE ap;
 
@@ -414,8 +351,6 @@ ON vendors.vendor_id = vendor_contacts.vendor_id
 
 
 ORDER BY vendor_name;
-
-
 
 
 /* Question 17 */
